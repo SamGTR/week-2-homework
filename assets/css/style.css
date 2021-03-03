@@ -1,16 +1,23 @@
+/* Application font family*/
 *{
     margin: 0;
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+/* header elements placement and spacing */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px 20px 0px;
     background-color: #2d363d;
-  }
+}
 
+aside{
+  width: 25%;
+}
+
+/* Navbar display */
 nav ul{
     display: flex;
     justify-content: space-between;
@@ -31,6 +38,7 @@ nav a {
     border-bottom: 4px solid #42d4df ;
 }
 
+/* Header name background color and font color */
 header h1{
       background-color: #42d4df;
       color: rgb(39, 42, 43);
@@ -38,69 +46,80 @@ header h1{
       
 }
 
+/* defining relative position */
 .image{
       position: relative;
-  }
+}
 
-#wall{
+/* setting centre display image */
+#developer{
     height: 200px;
     width: 100%;  
     object-fit: cover;
 }
 
-.bottom-left {
+/* 'Coding rocks!' Text absolute position on developer image */
+.coding {
     position: absolute;
     bottom: 15px;
     right: 50px;
     font-size: 50px;
-    background-color: #42d4df;
-    color: rgb(39, 42, 43);
+    background-color: rgb(39, 42, 43);
+    color: #42d4df;
 }
 
+/* All row display type */
 .first-row, 
 .second-row,
 .third-row{
       display: flex;
-      margin-top: 20px;
+      margin: 20px 60px 0 0;
       padding-bottom: 20px;
-      margin-right: 60px;
 }
 
+/* Left side main heading display */
 #about-me, 
 #work,
 #contact {
     flex: 20%;
-    padding-top: 0;
     padding-right: 20px;
     font-size: 50px;
     color: rgb(39, 42, 43) ;
-    flex-wrap: wrap;
     border-right: 5px solid  rgb(39, 42, 43);
     text-align: right;
 }
 
+/* About me write up */
 .detail, .work-detail {
     flex: 80%;
-    padding-top: 0;
     padding-left: 20px;
-    background-color: #fff;
-    
 }
 
-#wave-image {
+/* Wave image parameters */
+.wave-image
+   {
     height: 500px;
     width: 100%;  
     object-fit: cover;
     border: 10px solid #42d4df ;
 }
+  
+#wave-image
+   {
+    height: 500px;
+    width: 100%;  
+}
 
+/* Setting relative reference for texts on images */
 .work-relative{
     position: relative;
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
   
 }
 
+/* Absolute position of text on images */
 .work-text{
     position: absolute;
     bottom: 40px;
@@ -109,27 +128,30 @@ header h1{
     color: rgb(39, 42, 43);
     padding: 15px;
 }
-
+  
 .work-text h2{
     padding-bottom: 10px;
 
 }
 
-.led, .java {
+.led, 
+.calculator, 
+.pastel, .run {
     flex: 50%;
     position: relative;
     background-color: #fff;
-    display: inline;
 }
- 
+
+/* Abosulte positioning text on images */
 .calculator-text,
 .run-text{
     position: absolute;
     bottom: 40px;
-    left: 10px;
+    left: 15px;
     background-color: #42d4df;
     color: rgb(39, 42, 43);
     padding: 15px;
+   
     
 }
 
@@ -139,8 +161,17 @@ header h1{
 
 }
 
+.led-image, 
+.calculator-image,
+.pastel-image,
+.run-image {
+    height: 200px;
+    width: 95%;  
+}
+
+/* images placement and border */
 #led-image, 
-#java-image,
+#calculator-image,
 #pastel-image,
 #run-image{
     height: 200px;
@@ -149,16 +180,18 @@ header h1{
     border: 10px solid #42d4df ;
     
 }
-  
-#java-image,#run-image{
-    margin-left: 10px;
+
+#calculator-image,#run-image{
+    margin-left: 5px;
 }
-  
+
+/* Contact me right side content */
 .detail ul {
     display: flex;
     justify-content: space-between;
     width: 80%;
     font-size: 20px;
+    flex-wrap: wrap;
     
 }
   
@@ -169,7 +202,41 @@ header h1{
 }
   
 .detail li {
-    display: inline;
+    display: inline-block;
     font-size: larger;
-    padding: 80px 30px;
+    padding: 20px 20px;
+}
+
+/* Image brightness change with mouse hovering */
+#wave-image:hover,
+#led-image:hover,
+#calculator-image:hover,
+#pastel-image:hover,
+#run-image:hover
+  {
+      filter: brightness(130%);
+}
+
+/* Responsive design for smaller pixel screen */
+@media screen and (max-width: 900px) {
+  .work-relative, ul{
+      flex-direction: column;
+    }
+  li{
+      margin-bottom: 10px;
+    }
+  .first-row, 
+  .second-row,
+  .third-row{
+    display: block;
+    
+  }
+  #about-me, 
+  #work,
+  #contact{
+    border-right: none;
+    border-bottom: 5px solid  rgb(39, 42, 43);
+    margin-bottom: 10px;
+  }
+
 }
