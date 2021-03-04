@@ -1,4 +1,4 @@
-# Week-2-Homework - Portfolio
+# Week-2-Homework - Professional Portfolio
 
 Sam Patel portfolio page using HTML and CSS.
 
