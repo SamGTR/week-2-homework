@@ -14,7 +14,7 @@ header {
 }
 
 aside{
-  width: 25%;
+ min-width: 25%;
 }
 
 /* Navbar display */
@@ -152,7 +152,6 @@ header h1{
     background-color: #42d4df;
     color: rgb(39, 42, 43);
     padding: 15px;
-   
     
 }
 
@@ -179,10 +178,11 @@ header h1{
     width: 95%;  
     object-fit: cover;
     border: 10px solid #42d4df ;
+   
     
 }
 
-#calculator-image,#run-image{
+#calculator-image, #run-image{
     margin-left: 5px;
 }
 
@@ -223,21 +223,51 @@ header h1{
   .work-relative, ul{
       flex-direction: column;
     }
+
   li{
       margin-bottom: 10px;
+      text-align: left;
     }
+
   .first-row, 
   .second-row,
   .third-row{
     display: block;
     
   }
+
   #about-me, 
   #work,
   #contact{
     border-right: none;
     border-bottom: 5px solid  rgb(39, 42, 43);
     margin-bottom: 10px;
+    text-align: left;
   }
+
+#led-image, 
+#calculator-image,
+#pastel-image,
+#run-image {
+    height: 200px;
+    width: 100%;  
+    object-fit:cover;   
+    margin: 10px 0;
+}
+aside{
+ width: 100%;
+}
+aside > div {
+      display:flex;
+    
+     }
+
+aside  div  h3 {
+    margin-left: 10px;
+}
+
+.detail li {
+    padding-left: 0;
+}
 
 }
